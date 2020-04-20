@@ -14,8 +14,7 @@
   }
 
   const openPhoto = (id, href) => {
-    const escapedID = id.replace(/^([0-9])/, "\\3$1 ");
-    const photo = document.querySelector(`#${escapedID}`);
+    const photo = document.getElementById(id);
     const title = photo.getAttribute('title');
     removeTargetClass();
     photo.classList.add(TARGET_CLASS);
